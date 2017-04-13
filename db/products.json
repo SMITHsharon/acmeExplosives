@@ -1,0 +1,65 @@
+{
+    "products": [{
+
+        "fairy_sparklers": {
+            "id": 0,
+            "type": 0,
+            "name": "Fairy Sparklers",
+            "description": "Multi-colored sparklers that are safe for any age."
+        },
+        
+        "bottle_rocket": {
+            "id": 1,
+            "type": 0,
+            "name": "Bottle Rocket",
+            "description": "Small sky-rocket; supervision required."
+        },
+        
+        "small_roman_candle": {
+            "id": 2,
+            "type": 0,
+            "name": "Small Roman Candle",
+            "description": "Ejects one or more exploding stars or shells; supervision required."
+        },
+        
+        "large_roman_candle": {
+            "id": 3,
+            "type": 1,
+            "name": "Large Roman Candle",
+            "description": "Ejects 10-20 balls of colorful fire."
+        },
+
+        "catherine_wheel": {
+            "id": 4,
+            "type": 1,
+            "name": "Catherine Wheel",
+            "description": "When ignited, rotates quickly producing display of sparks and colored flame."
+        },
+
+        "salute": {
+            "id": 5,
+            "type": 1,
+            "name": "Salute",
+            "description": "Explosive device that makes a loud bang with a very intense flash of light."
+        },
+        
+        "nitroglycerin": {
+            "id": 6,
+            "type": 2,
+            "name": "Nitroglycerin",
+            "description": "Explosives used to shatter reinforced concrete structures."
+        },
+        
+        "dynamite": {
+            "id": 7,
+            "type": 2,
+            "name": "Dynamite",
+            "description": "Explosives used to shatter reinforced concrete structures."
+        }
+    }]
+}
+
+
+
+
+
