@@ -3,19 +3,19 @@
         {
             "id": 0,
             "category": 0,
-            "name": "personal",
+            "name": "Personal",
             "description": "Fireworks intended for recreational use during holiday celebrations."
         },
         {
             "id": 1,
             "category": 0,
-            "name": "sports",
+            "name": "Sports",
             "description": "Fireworks intended for shows after major sports events."
         },
         {
             "id": 2,
             "category": 1,
-            "name": "controlled demolition",
+            "name": "Controlled Demolition",
             "description": "Fireworks intended for building implosions."
         }
     ]

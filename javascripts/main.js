@@ -5,23 +5,43 @@ var explosives = [];
 // constants
 var numCategories = 2;
 var numTypes = 3;
-var numProducts;
+var numProducts = 8;
 
 
 
 function writeDOM(){
     var domString = "";
+    var productsArray = explosives[5];
 
     domString += `<h1>Fireworks</h1>`;
-    var arrayIndexStart = 2;
-    for (var i=arrayIndexStart; i<numTypes+arrayIndexStart-1; i++) {
-    	domString += `<h3>${explosives[i].name}</h3>`;
+
+    var arrayIndexStart = 2; // explosives[2] , [3] tie to category Personal <0>
+    for (var i=arrayIndexStart; i<numTypes+arrayIndexStart; i++) {
+    	if (explosives[i].category === 0) {
+    		domString += `<h3>${explosives[i].name}</h3>`;
+
+
+	    	for (var j=0; j<numProducts; j++) {
+    		// explosives[5] starts the Product Objects in <explosives> array
+	    		Object.keys(productsArray).forEach(function(key){
+		    		if (productsArray[key]["type"] === explosives[i].category) {
+	// console.log("productsArray[j].type // j :: ", j, productsArray[j].type);
+	console.log("explosives[i].category // i :: ", i, explosives[i].category); // 2, 0
+	// console.log("inside for loop / productName :: ", productName);
+		    			domString += `<h5>${productsArray[key].name}</h5>`;
+		    		}
+	    		})
+	    	}
+    	}
     }
 
     domString += `<h1>Demolition</h1>`;
-    var arrayIndexStart = 4;
+
+    var arrayIndexStart = 4; // explosives[4] tie2 to category Demolition <1>
     for (var i=arrayIndexStart; i<numTypes+arrayIndexStart-1; i++) {
-    	domString += `<h3>${explosives[i].name}</h3>`;
+    	if (explosives[i].category === 1) {
+    		domString += `<h3>${explosives[i].name}</h3>`;
+    	}
     }
 
 	$("#explosionsOutput").append(domString);
@@ -62,7 +82,7 @@ var productsJSON = function(){
 
 Promise.all([categoriesJSON(), typesJSON(), productsJSON()])
         .then(function(resultz){
-console.log("resultz", resultz);
+// console.log("resultz", resultz);
             resultz.forEach(function(ajaxCalls){
                 ajaxCalls.forEach(function(acme){
                     explosives.push(acme);
