@@ -3,49 +3,49 @@ $(document).ready(function(){
 var explosives = [];
 
 // constants
-var numCategories = 2;
-var numTypes = 3;
-var numProducts = 8;
+// var numCategories = 2;
+// var numTypes = 3;
+// var fireworksTypes = 2;
+// var demolitionTypes = 1;
+// var numProducts = 8;
+// var arrayIndexStart;
 
 
 
 function writeDOM(){
     var domString = "";
-    var productsArray = explosives[5];
+    
+    var selected = 0;
+    if (selected === 0) {
+    	domString += `<h1>Fireworks</h1>`;
+    	// arrayIndexStart = 2; // explosives[2] , [3] tie to category Personal <0>
+    	// typesLength = fireworksTypes;
+    } else {
+    	domString += `<h1>Demolition</h1>`;
+    	// arrayIndexStart = 4; // explosives[4] tied to category Demolition <1>
+    	// typesLength = demolitionTypes;
+	};
 
-    domString += `<h1>Fireworks</h1>`;
+	for (var i=0; i<explosives.length; i++) {
+    // for (var i=arrayIndexStart; i<typesLength+arrayIndexStart; i++) {
+// console.log("explosives[4].category  / selected :: ", explosives[4].category, selected);
+    	if (explosives[i].category === selected) {
+// console.log("explosives[i].category :: ", explosives[i].category);
+     		domString += `<h3>${explosives[i].name}</h3>`;
 
-    var arrayIndexStart = 2; // explosives[2] , [3] tie to category Personal <0>
-    for (var i=arrayIndexStart; i<numTypes+arrayIndexStart; i++) {
-    	if (explosives[i].category === 0) {
-    		domString += `<h3>${explosives[i].name}</h3>`;
+     		$.each( explosives, function( index, value ) {
+			$.each( value, function ( index2, value2 ) {
+				if ((value2.name !== undefined) && (value2.type === explosives[i].id)) {
+					domString += `<h5>${value2.name}</h5>`;
+				} // <if>
+			}); // <each>
+		}); // <each>
+     	};
 
-
-	    	for (var j=0; j<numProducts; j++) {
-    		// explosives[5] starts the Product Objects in <explosives> array
-	    		Object.keys(productsArray).forEach(function(key){
-		    		if (productsArray[key]["type"] === explosives[i].category) {
-	// console.log("productsArray[j].type // j :: ", j, productsArray[j].type);
-	console.log("explosives[i].category // i :: ", i, explosives[i].category); // 2, 0
-	// console.log("inside for loop / productName :: ", productName);
-		    			domString += `<h5>${productsArray[key].name}</h5>`;
-		    		}
-	    		})
-	    	}
-    	}
-    }
-
-    domString += `<h1>Demolition</h1>`;
-
-    var arrayIndexStart = 4; // explosives[4] tie2 to category Demolition <1>
-    for (var i=arrayIndexStart; i<numTypes+arrayIndexStart-1; i++) {
-    	if (explosives[i].category === 1) {
-    		domString += `<h3>${explosives[i].name}</h3>`;
-    	}
-    }
+    } // <for i>
 
 	$("#explosionsOutput").append(domString);
-}
+} // <writeDom>
 
 
 
@@ -82,7 +82,7 @@ var productsJSON = function(){
 
 Promise.all([categoriesJSON(), typesJSON(), productsJSON()])
         .then(function(resultz){
-// console.log("resultz", resultz);
+console.log("resultz", resultz);
             resultz.forEach(function(ajaxCalls){
                 ajaxCalls.forEach(function(acme){
                     explosives.push(acme);
