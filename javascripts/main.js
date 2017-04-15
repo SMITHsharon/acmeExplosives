@@ -2,44 +2,32 @@ $(document).ready(function(){
 
 var explosives = [];
 
-// constants
-// var numCategories = 2;
-// var numTypes = 3;
-// var fireworksTypes = 2;
-// var demolitionTypes = 1;
-// var numProducts = 8;
-// var arrayIndexStart;
-
-
-
 function writeDOM(){
     var domString = "";
     
     var selected = 0;
     if (selected === 0) {
     	domString += `<h1>Fireworks</h1>`;
-    	// arrayIndexStart = 2; // explosives[2] , [3] tie to category Personal <0>
-    	// typesLength = fireworksTypes;
     } else {
     	domString += `<h1>Demolition</h1>`;
-    	// arrayIndexStart = 4; // explosives[4] tied to category Demolition <1>
-    	// typesLength = demolitionTypes;
 	};
 
 	for (var i=0; i<explosives.length; i++) {
-    // for (var i=arrayIndexStart; i<typesLength+arrayIndexStart; i++) {
-// console.log("explosives[4].category  / selected :: ", explosives[4].category, selected);
     	if (explosives[i].category === selected) {
-// console.log("explosives[i].category :: ", explosives[i].category);
      		domString += `<h3>${explosives[i].name}</h3>`;
 
+// explosives.forEach(function (value) {
+// console.log("value :: ", value);
+// explosives.forEach(function (value2) {
+// console.log("value2 :: ", value2);
+
      		$.each( explosives, function( index, value ) {
-			$.each( value, function ( index2, value2 ) {
-				if ((value2.name !== undefined) && (value2.type === explosives[i].id)) {
-					domString += `<h5>${value2.name}</h5>`;
-				} // <if>
+				$.each( value, function ( index2, value2 ) {
+					if ((value2.name !== undefined) && (value2.type === explosives[i].id)) {
+						domString += `<h5>${value2.name}</h5>`;
+					} // <if>
+				}); // <each>
 			}); // <each>
-		}); // <each>
      	};
 
     } // <for i>
