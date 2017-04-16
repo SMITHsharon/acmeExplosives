@@ -2,6 +2,29 @@ $(document).ready(function(){
 
 var explosives = [];
 
+function writeDropdownMenu(){
+
+	var domString = "";
+	var thisID = -1;
+	var dropdownDone = false;
+
+	for (var i=0; i<explosives.length; i++) {
+		
+		if (thisID > explosives[i].id) {
+			dropdownDone = true;
+			i = explosives.length;
+		}
+			
+		if (!dropdownDone) {
+			thisID++;
+			domString += `<li><a href="#">${explosives[i].name}</a></li>`;
+		} // <if>
+	} // <for>
+	$(".dropdown-menu").append(domString);
+} // <writeDropdownMenu
+
+
+
 function writeDOM(){
     var domString = "";
     
@@ -29,9 +52,7 @@ function writeDOM(){
 				}); // <each>
 			}); // <each>
      	};
-
     } // <for i>
-
 	$("#explosionsOutput").append(domString);
 } // <writeDom>
 
@@ -77,7 +98,7 @@ console.log("resultz", resultz);
                 })
             })
 console.log("explosives :: ", explosives);
-            writeDOM();
+            writeDropdownMenu();
         })
 
 });
