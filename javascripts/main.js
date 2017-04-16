@@ -17,7 +17,7 @@ function writeDropdownMenu(){
 			
 		if (!dropdownDone) {
 			thisID++;
-			domString += `<li><a href="#">${explosives[i].name}</a></li>`;
+			domString += `<li><a id=${explosives[i].id} href="#">${explosives[i].name}</a></li>`;
 		} // <if>
 	} // <for>
 	$(".dropdown-menu").append(domString);
@@ -25,10 +25,20 @@ function writeDropdownMenu(){
 
 
 
-function writeDOM(){
+// handler for click event on a dropdown menu
+$(".dropdown-menu").on("click", function(e){
+console.log("in click");
+console.log(e.target.id);
+	writeDOM(parseInt(e.target.id));
+});
+
+
+function writeDOM(selected){
+// console.log("selected :: ", selected);
     var domString = "";
+    $("#explosionsOutput").empty(); // clear DOM
     
-    var selected = 0;
+    // var selected = 0;
     if (selected === 0) {
     	domString += `<h1>Fireworks</h1>`;
     } else {
