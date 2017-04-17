@@ -9,11 +9,17 @@
         {
             "id": 1,
             "category": 0,
-            "name": "Sports",
+            "name": "Sports Events",
             "description": "Fireworks intended for shows after major sports events."
         },
         {
             "id": 2,
+            "category": 0,
+            "name": "Big Civic Events",
+            "description": "Fireworks intended for shows after major sports events."
+        },
+        {
+            "id": 3,
             "category": 1,
             "name": "Controlled Demolition",
             "description": "Fireworks intended for building implosions."

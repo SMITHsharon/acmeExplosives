@@ -43,17 +43,45 @@
             "description": "Explosive device that makes a loud bang with a very intense flash of light."
         },
         
-        "nitroglycerin": {
+        
+        "large_roman_candle": {
             "id": 6,
             "type": 2,
+            "name": "Bigger Roman Candle",
+            "description": "Ejects 10-20 balls of colorful fire."
+        },
+
+        "catherine_wheel": {
+            "id": 7,
+            "type": 2,
+            "name": "Bigger Catherine Wheel",
+            "description": "When ignited, rotates quickly producing display of sparks and colored flame."
+        },
+
+        "salute": {
+            "id": 8,
+            "type": 2,
+            "name": "Huge Salute",
+            "description": "Explosive device that makes a loud bang with a very intense flash of light."
+        },
+        "nitroglycerin": {
+            "id": 9,
+            "type": 3,
             "name": "Nitroglycerin",
             "description": "Explosives used to shatter reinforced concrete structures."
         },
         
         "dynamite": {
-            "id": 7,
-            "type": 2,
+            "id": 10,
+            "type": 3,
             "name": "Dynamite",
+            "description": "Explosives used to shatter reinforced concrete structures."
+        },
+        
+        "serious_stuff": {
+            "id": 11,
+            "type": 3,
+            "name": "Who Knows What Else Brings Buildings Down",
             "description": "Explosives used to shatter reinforced concrete structures."
         }
     }]
