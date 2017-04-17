@@ -9,7 +9,6 @@ var productsArray = [];
 function writeDropdownMenu(){
 
 	var domString = "";
-console.log("categoriesArray.length :: ", categoriesArray.length);
 	for (var i=0; i<categoriesArray.length; i++) {
 
 		domString += `<li><a id=${categoriesArray[i].id} href="#">${categoriesArray[i].name}</a></li>`;
@@ -37,59 +36,41 @@ console.log("productsArray :: ", productsArray);
 
     $("#explosionsOutput").empty(); // clear DOM
     
-    // var selected = 0;
-    if (selected === 0) {
-    	domString += `<h1>Fireworks</h1>`;
-    } else {
-    	domString += `<h1>Demolition</h1>`;
-	};
+    domString += `<h1>${categoriesArray[selected].name}</h1>`;
 
-	for (var i=0; i<explosives.length; i++) {
+	for (var i=0; i<typesArray.length; i++) {
+		if (counter % 3 === 0) {
+			domString += `<div class="row">`;
+		}
 
-    	
+		if (typesArray[i].category === selected) {
+			domString += `<div class="acmeCard col-sm-3">`;
+			domString += `<h2>${typesArray[i].name}</h2>`;
+			domString += `<p>${typesArray[i].description}</p>`;
 
-// explosives.forEach(function (value) {
-// console.log("value :: ", value);
-// explosives.forEach(function (value2) {
-// console.log("value2 :: ", value2);
+// console.log("productsArray.length :: ", productsArray[length]);
 
-     		$.each( explosives, function( index, value ) {
-console.log("outer loop :: index, value :: ", index, value);
-// console.log("explosives :: ", explosives);
-				$.each( value, function ( index2, value2 ) {
+			// for (var j=0; j<productsArray.length; j++) {
+			$.each( productsArray, function( index, product ) {
+				if (product.type === typesArray[i].id) {
+console.log("i /  product.type / typesArray[i].id :: ", i, product.type, typesArray[i].id);
+					domString += `<h4>${product.name}</h4>`;
+					domString += `<p>${product.description}</p>`;
+				}
+			})
+		}
 
+		domString += `</div>`;
+		counter++;
+		if (counter % 3 === 0) {
+			domString += `</div>`;
+		}
 
-					if ((value2.name !== undefined) 
-						&& (explosives[i].category === selected)
-						&& (value2.type === explosives[i].id)) {
+	} // <for>
 
-						
-						
-
-						domString += `<div>`;
-			     		domString += `<h3>${explosives[i].name}</h3>`;
-			     		
-
-console.log("value2 / explosives[i] / i :: ", i, value2, explosives[i]);
-console.log("value2.type / explosives[i].id / i :: ", i, value2.type, explosives[i].id);
-						domString += `<h5>${value2.name}</h5>`;
-					} // <if>
-					counter++;
-					if (counter % 3 === 0) {
-						domString += `</div>`;
-						domString += `<div class="row">`;
-						domString += `<div class="explCard col-sm-3">`;
-					}
-					
-
-				}); // <each>
-			}); // <each>
-			domString += `</div></div>`;
-     	// };
-    } // <for i>
-
-	domString += `</div>`;
+	domString += `</div></div>`;
 	$("#explosionsOutput").append(domString);
+
 } // <writeDom>
 
 
