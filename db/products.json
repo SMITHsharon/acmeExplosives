@@ -64,25 +64,65 @@
             "name": "Huge Salute",
             "description": "Explosive device that makes a loud bang with a very intense flash of light."
         },
-        "nitroglycerin": {
+        "lw_nitroglycerin": {
             "id": 9,
             "type": 3,
-            "name": "Nitroglycerin",
+            "name": "Lite-Weight Nitroglycerin",
+            "description": "Explosives used to shatter smallish concrete structures."
+        },
+        
+        "lw_dynamite": {
+            "id": 10,
+            "type": 3,
+            "name": "Lite-Weight Dynamite",
+            "description": "Explosives used to shatter smallish reinforced concrete structures."
+        },
+        
+        "lite_weight_stuff": {
+            "id": 11,
+            "type": 3,
+            "name": "Who Knows What Else Brings Buildings Down",
+            "description": "Explosives used to shatter smallish reinforced concrete structures."
+        },
+        "nitroglycerin": {
+            "id": 9,
+            "type": 4,
+            "name": "Big-Ass Nitroglycerin",
             "description": "Explosives used to shatter reinforced concrete structures."
         },
         
         "dynamite": {
             "id": 10,
-            "type": 3,
-            "name": "Dynamite",
+            "type": 4,
+            "name": "Big-Ass Dynamite",
             "description": "Explosives used to shatter reinforced concrete structures."
         },
         
         "serious_stuff": {
             "id": 11,
-            "type": 3,
+            "type": 4,
             "name": "Who Knows What Else Brings Buildings Down",
             "description": "Explosives used to shatter reinforced concrete structures."
+        },
+        "ba_nitroglycerin": {
+            "id": 9,
+            "type": 5,
+            "name": "Big-Ass Nitroglycerin",
+            "description": "Explosives used to shatter big-ass reinforced bridges."
+        },
+        
+        "ba_dynamite": {
+            "id": 10,
+            "type": 5,
+            "name": "Big-Ass Dynamite",
+            "description": "Explosives used to shatter big-ass reinforced concrete bridges."
+        },
+        
+        "ba_serious_stuff": {
+            "id": 11,
+            "type": 5,
+            "name": "Who Knows What Else Brings Buildings Down",
+            "description": "Explosives used to shatter big-ass reinforced concrete bridges."
         }
     }]
 }

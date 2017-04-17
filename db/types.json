@@ -21,8 +21,20 @@
         {
             "id": 3,
             "category": 1,
-            "name": "Controlled Demolition",
-            "description": "Fireworks intended for building implosions."
+            "name": "Medium Buildings",
+            "description": "Fireworks intended for medium-sized building implosions."
+        },
+        {
+            "id": 4,
+            "category": 1,
+            "name": "Big-Ass Buildings",
+            "description": "Fireworks intended for five+ -stories building implosions."
+        },
+        {
+            "id": 5,
+            "category": 1,
+            "name": "Bridges",
+            "description": "Fireworks intended for bridges implosions."
         }
     ]
 }

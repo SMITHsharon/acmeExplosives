@@ -114,6 +114,7 @@ categoriesJSON().then(function(categoriesData){
 }).then(function(typesData){
     typesData.forEach(function(types){
         typesArray.push(types);
+console.log("typesArray :: ", typesArray);
     })
     return productsJSON();
 }).then(function(productsData){
