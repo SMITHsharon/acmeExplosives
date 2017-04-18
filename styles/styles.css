@@ -1,12 +1,13 @@
 
 body {
-	background-color: lightblue;
+	background-color: #EDD3D5;
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
 
 h1, .categoryHeader {
 	font-family: 'Rubik Mono One', sans-serif;
+	color: #401114;
 	margin-top: 3%;
 	padding-right: 5%;
 	text-align: center;
@@ -35,7 +36,8 @@ h1, .categoryHeader {
 
 .typeHeader {
 	margin-bottom: 0;
-	color: red;
+	color: #AD5C61;
+	font-weight: 900;
 
 }
 
