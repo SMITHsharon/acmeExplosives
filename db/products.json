@@ -44,25 +44,25 @@
         },
         
         
-        "large_roman_candle": {
+        "huge_candle": {
             "id": 6,
             "type": 2,
             "name": "Bigger Roman Candle",
-            "description": "Ejects 10-20 balls of colorful fire."
+            "description": "Ejects 30 balls of colorful neon balls of fire."
         },
 
-        "catherine_wheel": {
+        "huge_catherine_wheel": {
             "id": 7,
             "type": 2,
             "name": "Bigger Catherine Wheel",
-            "description": "When ignited, rotates quickly producing display of sparks and colored flame."
+            "description": "When ignited, rotates quickly producing massive display of brightly colored flame."
         },
 
-        "salute": {
+        "huge_salute": {
             "id": 8,
             "type": 2,
             "name": "Huge Salute",
-            "description": "Explosive device that makes a loud bang with a very intense flash of light."
+            "description": "Explosive device that makes a ear-splitting bang with a very intense flash of light."
         },
         "lw_nitroglycerin": {
             "id": 9,

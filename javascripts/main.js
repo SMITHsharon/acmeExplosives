@@ -1,42 +1,45 @@
+// jQuery <document> wrapper
 $(document).ready(function(){
-
-var explosives = [];
 
 var categoriesArray = [];
 var typesArray = [];
 var productsArray = [];
 
+
+// function dynamically writes the Categories options to the 
+// <Explosives Products> dropdown menu, reading from <categoriesArray>
 function writeDropdownMenu(){
 
 	var domString = "";
 	for (var i=0; i<categoriesArray.length; i++) {
 
 		domString += `<li><a id=${categoriesArray[i].id} href="#">${categoriesArray[i].name}</a></li>`;
-	} // <for>
+	} 
 	$(".dropdown-menu").append(domString);
 } // <writeDropdownMenu
 
 
-
-// handler for click event on a dropdown menu
+// event handler for click event on the <Explosives Products> dropdown menu
+// passes the user-selected option from the menu, parsed as an integer
+// to <writeDOM> funciton
 $(".dropdown-menu").on("click", function(e){
 	writeDOM(parseInt(e.target.id));
 });
 
 
+// function writes the Explosives Products Line for the user-selected category
+// Takes as Parameter :: user-selected menu option, given as an integer
+// Displays the Explsives Products for the selected category, sorted by Type
 function writeDOM(selected){
-// console.log("selected :: ", selected);
-
-console.log("categoriesArray :: ", categoriesArray);
-console.log("typesArray :: ", typesArray);
-console.log("productsArray :: ", productsArray);
 
 	var counter = 0;
-	domString = "";
+	var domString = "";
 
     $("#explosionsOutput").empty(); // clear DOM
-    
-    domString += `<h1>${categoriesArray[selected].name}</h1>`;
+    var selectedHeader = "* " + categoriesArray[selected].name.toUpperCase().split('').join(' ') + " *";
+    console.log("selectedHeader :: ", selectedHeader);
+    domString += `<h1 class="categoryHeader">${selectedHeader}</h1>`;
+    // domString += `<h1 class="categoryHeader">${categoriesArray[selected].name}</h1>`;
 
 	for (var i=0; i<typesArray.length; i++) {
 		if (counter % 3 === 0) {
@@ -44,28 +47,23 @@ console.log("productsArray :: ", productsArray);
 		}
 
 		if (typesArray[i].category === selected) {
-			domString += `<div class="acmeCard col-sm-3">`;
-			domString += `<h2>${typesArray[i].name}</h2>`;
-			domString += `<p>${typesArray[i].description}</p>`;
+			domString += `<div class="acmeCard col-sm-4">`;
+			domString += `<h3 class="typeHeader">${typesArray[i].name}</h3>`;
+			domString += `<p class="typeDesc">${typesArray[i].description}</p>`;
 
-// console.log("productsArray.length :: ", productsArray[length]);
-
-			// for (var j=0; j<productsArray.length; j++) {
 			$.each( productsArray, function( index, product ) {
 				if (product.type === typesArray[i].id) {
-console.log("i /  product.type / typesArray[i].id :: ", i, product.type, typesArray[i].id);
-					domString += `<h4>${product.name}</h4>`;
-					domString += `<p>${product.description}</p>`;
-				}
-			})
-		}
+					domString += `<h4 class="productHeader">${product.name}</h4>`;
+					domString += `<p class="productDesc">${product.description}</p>`;
+				} // <if>
+			}) // <.each>
+		} // <if>
 
 		domString += `</div>`;
 		counter++;
 		if (counter % 3 === 0) {
 			domString += `</div>`;
-		}
-
+		} // <if> row counter
 	} // <for>
 
 	domString += `</div></div>`;
@@ -75,6 +73,9 @@ console.log("i /  product.type / typesArray[i].id :: ", i, product.type, typesAr
 
 
 
+// functions for getting the indicated JSON files
+// each function returns the parsed datafile on success
+// returns error condition on fail
 var categoriesJSON = function(){
         return new Promise(function(resolve, reject){
             $.ajax("./db/categories.json").done(function(data1){
@@ -106,15 +107,14 @@ var productsJSON = function(){
 };
 
 
- // Process the JSON data files into three separate arrays
- // categories, types, products
+ // Processes the JSON data files into three separate arrays
+ // <categoriesArray>, <typesArray>, <productsArray>
 categoriesJSON().then(function(categoriesData){
     categoriesArray = categoriesData;
     return typesJSON();
 }).then(function(typesData){
     typesData.forEach(function(types){
         typesArray.push(types);
-console.log("typesArray :: ", typesArray);
     })
     return productsJSON();
 }).then(function(productsData){
@@ -126,8 +126,8 @@ console.log("typesArray :: ", typesArray);
 });
 
 
-// Rewrote the following <Promise.all> to the above ^^^ to flatten the data
-// to three separated arrays
+// Rewrote the following <Promise.all> to the above ^^^ 
+// to flatten the data to three separated arrays
 // 
 // Promise.all([categoriesJSON(), typesJSON(), productsJSON()])
 //         .then(function(resultz){
@@ -141,4 +141,4 @@ console.log("typesArray :: ", typesArray);
 //             writeDropdownMenu();
 //         })
 
-});
+}); // end <jQuery> document wrapper
