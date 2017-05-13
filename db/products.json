@@ -1,0 +1,133 @@
+{
+    "products": [{
+
+        "fairy_sparklers": {
+            "id": 0,
+            "type": 0,
+            "name": "Fairy Sparklers",
+            "description": "Multi-colored sparklers that are safe for any age."
+        },
+        
+        "bottle_rocket": {
+            "id": 1,
+            "type": 0,
+            "name": "Bottle Rocket",
+            "description": "Small sky-rocket; supervision required."
+        },
+        
+        "small_roman_candle": {
+            "id": 2,
+            "type": 0,
+            "name": "Small Roman Candle",
+            "description": "Ejects one or more exploding stars or shells; supervision required."
+        },
+        
+        "large_roman_candle": {
+            "id": 3,
+            "type": 1,
+            "name": "Large Roman Candle",
+            "description": "Ejects 10-20 balls of colorful fire."
+        },
+
+        "catherine_wheel": {
+            "id": 4,
+            "type": 1,
+            "name": "Catherine Wheel",
+            "description": "When ignited, rotates quickly producing display of sparks and colored flame."
+        },
+
+        "salute": {
+            "id": 5,
+            "type": 1,
+            "name": "Salute",
+            "description": "Explosive device that makes a loud bang with a very intense flash of light."
+        },
+        
+        
+        "huge_candle": {
+            "id": 6,
+            "type": 2,
+            "name": "Bigger Roman Candle",
+            "description": "Ejects 30 balls of colorful neon balls of fire."
+        },
+
+        "huge_catherine_wheel": {
+            "id": 7,
+            "type": 2,
+            "name": "Bigger Catherine Wheel",
+            "description": "When ignited, rotates quickly producing massive display of brightly colored flame."
+        },
+
+        "huge_salute": {
+            "id": 8,
+            "type": 2,
+            "name": "Huge Salute",
+            "description": "Explosive device that makes a ear-splitting bang with a very intense flash of light."
+        },
+        "lw_nitroglycerin": {
+            "id": 9,
+            "type": 3,
+            "name": "Lite-Weight Nitroglycerin",
+            "description": "Explosives used to shatter smallish concrete structures."
+        },
+        
+        "lw_dynamite": {
+            "id": 10,
+            "type": 3,
+            "name": "Lite-Weight Dynamite",
+            "description": "Explosives used to shatter smallish reinforced concrete structures."
+        },
+        
+        "lite_weight_stuff": {
+            "id": 11,
+            "type": 3,
+            "name": "Who Knows What Else Brings Buildings Down",
+            "description": "Explosives used to shatter smallish reinforced concrete structures."
+        },
+        "nitroglycerin": {
+            "id": 9,
+            "type": 4,
+            "name": "Big-Ass Nitroglycerin",
+            "description": "Explosives used to shatter reinforced concrete structures."
+        },
+        
+        "dynamite": {
+            "id": 10,
+            "type": 4,
+            "name": "Big-Ass Dynamite",
+            "description": "Explosives used to shatter reinforced concrete structures."
+        },
+        
+        "serious_stuff": {
+            "id": 11,
+            "type": 4,
+            "name": "Who Knows What Else Brings Buildings Down",
+            "description": "Explosives used to shatter reinforced concrete structures."
+        },
+        "ba_nitroglycerin": {
+            "id": 9,
+            "type": 5,
+            "name": "Big-Ass Nitroglycerin",
+            "description": "Explosives used to shatter big-ass reinforced bridges."
+        },
+        
+        "ba_dynamite": {
+            "id": 10,
+            "type": 5,
+            "name": "Big-Ass Dynamite",
+            "description": "Explosives used to shatter big-ass reinforced concrete bridges."
+        },
+        
+        "ba_serious_stuff": {
+            "id": 11,
+            "type": 5,
+            "name": "Who Knows What Else Brings Buildings Down",
+            "description": "Explosives used to shatter big-ass reinforced concrete bridges."
+        }
+    }]
+}
+
+
+
+
+

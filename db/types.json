@@ -1,0 +1,40 @@
+{
+    "types": [
+        {
+            "id": 0,
+            "category": 0,
+            "name": "Personal",
+            "description": "Fireworks intended for recreational use during holiday celebrations."
+        },
+        {
+            "id": 1,
+            "category": 0,
+            "name": "Sports Events",
+            "description": "Fireworks intended for shows after major sports events."
+        },
+        {
+            "id": 2,
+            "category": 0,
+            "name": "Big Civic Events",
+            "description": "Fireworks intended for shows after major sports events."
+        },
+        {
+            "id": 3,
+            "category": 1,
+            "name": "Medium Buildings",
+            "description": "Fireworks intended for medium-sized building implosions."
+        },
+        {
+            "id": 4,
+            "category": 1,
+            "name": "Big-Ass Buildings",
+            "description": "Fireworks intended for five+ -stories building implosions."
+        },
+        {
+            "id": 5,
+            "category": 1,
+            "name": "Bridges",
+            "description": "Fireworks intended for bridges implosions."
+        }
+    ]
+}

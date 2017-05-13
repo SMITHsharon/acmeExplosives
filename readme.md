@@ -47,11 +47,9 @@ cd acmeExplosives
 cd lib
 bower install
 npm install
-cd ..
-hs -c-1 (this will run http-server without caching issues)
-http-server -p 8080
-This should show in your browser at localhost:8080
-```
+-server -p 8080
+
+This will show in your browser at: `http://localhost:8080`
 
 ### Contributor
 [Sharon Smith](https://github.com/SMITHsharon)

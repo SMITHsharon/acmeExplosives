@@ -1,3 +1,61 @@
+
 body {
-        background-color: lightblue;
+	background-color: #EDD3D5;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
+
+
+h1, .categoryHeader {
+	font-family: 'Rubik Mono One', sans-serif;
+	color: #401114;
+	margin-top: 3%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+
+.categoryHeader {
+	font-size: 3em;
+	border-top: 1px dotted red;
+	padding-top: 2%;
+}
+
+
+.btn-group {
+	margin-top: 2%;
+	margin-left: 120px;
+}
+
+
+#explosionsOutput, .container {
+	margin-left: 7%;
+	margin-right: 10%;
+	padding-right: 10%;
+}
+
+
+.typeHeader {
+	margin-bottom: 0;
+	color: #AD5C61;
+	font-weight: 900;
+
+}
+
+
+.typeDesc {
+	border-bottom: 2px dotted red;
+}
+
+
+.productHeader {
+	margin-top: 5%;
+	margin-bottom: 0;
+	font-weight: 900;
+}
+
+
+.productDesc {
+	padding-bottom: 2px;
+	border-bottom: 2px dotted darkgray;
+}
+
